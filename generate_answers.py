@@ -48,7 +48,7 @@ for idx, q in enumerate(questions, 1):
     if fname.exists():
         print(f"skip existing {fname.name}")
         continue
-    prompt = f"Ответь на следующий вопрос на русском языке подробно (минимум 230 слов): {q}"
+    prompt = f"Ответь на следующий вопрос на русском языке подробно (минимум 400 слов): {q}"
     try:
         resp = openai.chat.completions.create(
             model="gpt-4o",
